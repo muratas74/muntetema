@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="auto" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equivs="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <script src="./assets/js/custom.js"></script>
+    <title>Munte</title>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="inner-container">
+                    <div class="header__main">
+                        <div class="logo">
+                            <img src="./assets/images/munte-logo-.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="header__tools">
+
+                        <div class="header__mobile-menu-opener" onclick="openMenu(this)">
+                            <i class="icon-menu-open"></i>
+                        </div>
+                        <div class="header__tools__wrapper mobile-menu">
+                            <div class="mobile-menu-header">
+                                <div class="logo">
+                                    <img src="./assets/images/munte-logo-.svg" alt="">
+                                </div>
+                                <div class="menu-closer" onclick="openMenu(this)">
+                                    <i class="icon-menu-close"></i>
+                                </div>
+                            </div>
+                            <nav class="nav">
+                                <ul>
+                                    <li><a href="quick-buy-transactions.html">Hızlı Al/Sat</a></li>
+                                    <li><a href="market.html">Market</a></li>
+                                    <li><a href="promarket.html">ProMarket</a></li>
+                                    <!-- if logon -->
+                                    <li class="on-mobile has-sub">
+                                        <a href="">İşlemler</a>
+                                        <ul>
+                                            <li class="has-sub">
+                                                <a href="">Yatırma</a>
+                                                <ul>
+                                                    <li><a href="transactions-try-lodgement.html">TRY Yatırma</a></li>
+                                                    <li><a href="transactions-crypto-lodgement.html">Kripto Para Yatırma</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-sub">
+                                                <a href="">Çekme</a>
+                                                <ul>
+                                                    <li><a href="">TRY Çekme</a></li>
+                                                    <li><a href="transactions-crypto-withdraw.html">Kripto Para Çekme</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="">Dönüştürme</a></li>
+                                            <li class="has-sub">
+                                                <a href="">Emirlerim</a>
+                                                <ul>
+                                                    <li><a href="transactions-myorders.html">Açık Emirlerim</a></li>
+                                                    <li><a href="transactions-myorders.html">Gerçekleşen Emirlerim</a></li>
+                                                    <li><a href="transactions-myorders.html">İptal Edilen Emirlerim</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="">İşlem Geçmişim</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- if logon -->
+                                    <li class="on-mobile"><a href="transactions-assets.html">Varlıklarım</a></li>
+                                    <li><a href="">Blog</a></li>
+                                    <li class="has-sub"><a href="">Yardım</a>
+                                        <ul>
+                                            <li><a href="">Yardım</a></li>
+                                            <li><a href="">İşlem Ücreti</a></li>
+                                            <li><a href="">Limit</a></li>
+                                            <li><a href="">Duyurular</a></li>
+                                            <li><a href="">Sık Sorulan Sorular</a></li>
+                                            <li><a href="">Güvenlik</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="header__tools__user-actions">
+                                <div class="header__tools__user-actions__user">
+                                    <a href="" class="bttn bttn--primary-1--outline bttn--small">Giriş Yap</a>
+                                    <a href="" class="bttn bttn--primary-1 bttn--small">Kayıt Ol</a>
+                                </div>
+                                <ul>
+                                    <!-- login -->
+                                    <!-- <li>
+                                        <a href="">Giriş yap</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="bttn bttn--primary-1 bttn--small">Kayıt ol</a>
+                                    </li> -->
+                                    <!-- logon -->
+                                    <li class="has-sub">
+                                        <a href="">İşlemler</a>
+                                        <ul>
+                                            <li class="has-sub">
+                                                <a href="">Yatırma</a>
+                                                <ul>
+                                                    <li><a href="transactions-crypto-lodgement.html">TRY Yatırma</a>
+                                                    </li>
+                                                    <li><a href="transactions-crypto-lodgement.html">Kripto Para
+                                                            Yatırma</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-sub">
+                                                <a href="">Çekme</a>
+                                                <ul>
+                                                    <li><a href="transactions-try-withdraw.html">TRY Çekme</a></li>
+                                                    <li><a href="transactions-crypto-withdraw.html">Kripto Para
+                                                            Çekme</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="">Dönüştürme</a></li>
+                                            <li class="has-sub">
+                                                <a href="">Emirlerim</a>
+                                                <ul>
+                                                    <li><a href="transactions-myorders.html">Açık Emirlerim</a></li>
+                                                    <li><a href="transactions-myorders.html">Gerçekleşen Emirlerim</a></li>
+                                                    <li><a href="transactions-myorders.html">İptal Edilen Emirlerim</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="">İşlem Geçmişim</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="transactions-assets.html">Varlıklarım</a></li>
+                                    <li class="account new with-icon">
+                                        <a href="account-my-info.html"><i class="icon-user-1"></i></a>
+                                        <ul></ul>
+                                    </li>
+                                </ul>
+                                <div class="header__tools__lang-switch with-icon"><span class="label-text">Dil
+                                        Seçimi</span>
+                                    <div class="selected-lang has-sub">Türkçe</div><i class="icon-lang"></i>
+                                    <ul>
+                                        <li>TR</li>
+                                        <li>EN</li>
+                                    </ul>
+                                </div>
+                                <div class="header__tools__theme-switch">
+                                    <div class="label-text">Tema</div>
+                                    <label for="themeSwitch">
+                                        <input type="checkbox" name="themeSwitch" id="themeSwitch"
+                                            onchange="themeSwitch()">
+                                        <div class="header__tools__theme-switch__wrap">
+                                            <div class="header__tools__theme-switch__button">
+                                                <i class="icon-theme"></i>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <section class="account-area area">
+                    <div class="section-title title title--big title--primary-1">
+                        <h2>Ücretsin Hesap Oluştur</h2>
+                    </div>
+                    <div class="form-area">
+                        <form action="" class="">
+
+                            <div class="form-title title title--normal title--primary-1">Kimlik Bilgileriniz <p>Lütfen
+                                    bilgilerinizi kimliğinizde yazıldığı şekilde giriniz.</p>
+                            </div>
+                            <fieldset class="row row-cols-1 row-cols-md-2">
+                                <div class="f-row">
+                                    <div class="input-wrap nation">
+                                        <label for="">Uyruk</label>
+                                        <input type="text" placeholder="TC">
+                                    </div>
+                                    <div class="input-wrap">
+                                        <label for="">TC Kimlik Numarası</label>
+                                        <input type="number" autocomplete="idendity" placeholder="TC Kimlik Numaranız">
+                                    </div>
+                                </div>
+                                <div class="f-row f-row--multi">
+                                    <label for="">Doğum Tarihiniz</label>
+                                    <div class="input-wrap">
+                                        <!-- <input type="number" placeholder="GG">
+                                        <input type="number" placeholder="AA">
+                                        <input type="number" placeholder="YYY"> -->
+
+                                        <div class="dropdown combo-box combo-box__simple">
+                                            <input type="hidden">
+                                            <div class="select-info" tabindex="2">
+                                                <div class="selected">GG</div>
+                                            </div>
+                                            <ul>
+                                                <li data-combo="1">1</li>
+                                                <li data-combo="2">2</li>
+                                                <li data-combo="4">4</li>
+                                                <li data-combo="5">5</li>
+                                                <li data-combo="6">6</li>
+                                                <li data-combo="7">7</li>
+                                                <li data-combo="8">8</li>
+                                                <li data-combo="6">6</li>
+                                                <li data-combo="9">9</li>
+                                                <li data-combo="10">10</li>
+                                                <li data-combo="11">11</li>
+                                                <li data-combo="12">12</li>
+                                                <li data-combo="13">13</li>
+                                                <li data-combo="14">14</li>
+                                                <li data-combo="15">15</li>
+                                                <li data-combo="16">16</li>
+                                                <li data-combo="17">17</li>
+                                                <li data-combo="18">18</li>
+                                                <li data-combo="20">20</li>
+                                                <li data-combo="21">21</li>
+                                                <li data-combo="22">22</li>
+                                                <li data-combo="23">23</li>
+                                                <li data-combo="24">24</li>
+                                                <li data-combo="22">22</li>
+                                                <li data-combo="25">25</li>
+                                                <li data-combo="26">26</li>
+                                                <li data-combo="27">27</li>
+                                                <li data-combo="28">28</li>
+                                                <li data-combo="29">29</li>
+                                                <li data-combo="30">30</li>
+                                                <li data-combo="31">31</li>
+
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="dropdown combo-box combo-box__simple">
+                                            <div class="select-info" tabindex="2">
+                                                <div class="selected">AA</div>
+                                            </div>
+                                            <ul>
+                                                <li>Ocak</li>
+                                                <li>Şubat</li>
+                                                <li>Mart</li>
+                                                <li>Nisan</li>
+                                                <li>Mayıs</li>
+                                                <li>Haziran</li>
+                                                <li>Temmuz</li>
+                                                <li>Ağustos</li>
+                                                <li>Eylül</li>
+                                                <li>Ekim</li>
+                                                <li>Kasım</li>
+                                                <li>Aralık</li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="dropdown combo-box combo-box__simple">
+                                            <div class="select-info" tabindex="2">
+                                                <div class="selected">YYY</div>
+                                            </div>
+                                            <ul>
+                                                <li>1934</li>
+                                                <li>1935</li>
+                                                <li>1936</li>
+                                                <li>1937</li>
+                                                <li>1938</li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="f-row">
+                                    <div class="input-wrap">
+                                        <label for="">Ad</label>
+                                        <input type="text" autocomplete="given-name" name="name" placeholder="Adınız">
+                                    </div>
+                                </div>
+                                <div class="f-row">
+                                    <div class="input-wrap">
+                                        <label for="">Soyad</label>
+                                        <input type="text" autocomplete="family-name" name="surname"
+                                            placeholder="Soyadınız">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="form-title title title--normal title--primary-1">İletişim Bilgileriniz <p>
+                                    Hesabınızı
+                                    doğrulamak için iletişim bilgilerinizi giriniz.</p>
+                            </div>
+                            <fieldset class="row row-cols-1 row-cols-md-2">
+
+                                <div class="f-row">
+                                    <div class="input-wrap">
+                                        <label for="">Ceptelefonu</label>
+                                        <input type="tel" autocomplete="tel" placeholder="(5xx) xxx xx xx">
+                                    </div>
+                                </div>
+                                <div class="f-row">
+                                    <div class="input-wrap">
+                                        <label for="">E-posta</label>
+                                        <input type="email" class="not-valid" autocomplete="email"
+                                            placeholder="E-posta Adresiniz">
+                                        <div class="validation-message">Lütfen e-posta bilgilerinizi kontrol ediniz.
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="form-title title title--normal title--primary-1">Şifreniz <p>Şifreniz en az 8
+                                    karakterden
+                                    oluşmalı ve bir büyük harf, bir küçük harf, bir özel karakter ve bir sayı
+                                    içermelidir.</p>
+                            </div>
+                            <fieldset class="row row-cols-1 row-cols-md-2">
+                                <div class="f-row">
+                                    <div class="input-wrap password-wrap">
+                                          <label for="">Şifre</label>
+                                        <div class="icon-wrap">
+
+                                            <input type="password" autocomplete="new-password" name="password1"
+                                                id="password1" placeholder="Şifreniz">
+                                            <div class="password-show" onclick="passwordSwitch(this)">
+                                                <i class="icon-"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f-row">
+                                    <div class="input-wrap password-wrap">
+                                          <label for="">Şifre</label>
+                                        <div class="icon-wrap">
+
+                                            <input type="password" autocomplete="new-password" name="password2"
+                                                id="password2" placeholder="Şifreniz">
+                                            <div class="password-show" onclick="passwordSwitch(this)">
+                                                <i class="icon-"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="row row-cols-1 mt-4">
+                                <div class="f-row">
+                                    <div class="input-wrap">
+                                        <label for="c1">
+                                            <input type="checkbox" id="c1">
+                                            <span class="checkbox"></span>
+                                            <span class="label">Munte Kullanıcı Sözleşmesi'ni okudum, onaylıyorum.
+                                                *</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="f-row">
+                                    <div class="input-wrap">
+                                        <label for="c2">
+                                            <input type="checkbox" id="c2">
+                                            <span class="checkbox"></span>
+                                            <span class="label">Munte ile paylaştığım iletişim bilgilerimin pazarlama
+                                                faaliyetlerinde kullanılmasını ve ticari elektronik ileti almayı kabul
+                                                ediyorum.</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="f-row">
+                                    <div class="input-wrap">
+                                        <label for="c3">
+                                            <input type="checkbox" id="c3">
+                                            <span class="checkbox"></span>
+                                            <span class="label">Munte ile paylaştığım iletişim bilgilerimin pazarlama
+                                                faaliyetlerinde kullanılmasını ve ticari elektronik ileti almayı kabul
+                                                ediyorum.</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="f-row">
+                                    <p>Kişisel verileriniz Munte Bilişim A.Ş. tarafından üyelik ve kripto varlık alım
+                                        satım işlemlerine ilişkin olarak işlenmektedir. Detaylı bilgi ve haklarınız için
+                                        Aydınlatma Metnini inceleyebilirsiniz.</p>
+                                </div>
+                                <div class="f-row mt-3 w100 justify-content-center">
+                                    <button disabled>Hesap oluştur</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="inner-wrapper">
+                    <div class="corporate">
+                        <div class="corporate__logo">
+                            <img src="./assets/images/munte-logo-.svg" alt="Munte">
+                        </div>
+                        <div class="corporate__contact">
+                            <div class="corporate__address">
+                                <div class="corporate__address__row">
+                                    <div class="label-text">Adres:</div>
+                                    <div class="labeled-text">Küçükbakkalköy Mah. Yenidoğan Cad. No:25/1 İstanbul /
+                                        Ataşehir</div>
+                                </div>
+                                <div class="corporate__address__row">
+                                    <div class="label-text">E-posta:</div>
+                                    <div class="labeled-text"><a
+                                            href="mailto:destek@munte.com.tr">destek@munte.com.tr</a></div>
+                                </div>
+                                <div class="corporate__address__row">
+                                    <div class="label-text">Müşteri Hizmetleri:</div>
+                                    <div class="labeled-text"><a href="tel:+908504444444">0850 444 44 44</a></div>
+                                </div>
+                            </div>
+                            <div class="corporate__social-media">
+                                <ul>
+                                    <li><a href=""><i class="icon-instagram"></i></a></li>
+                                    <li><a href=""><i class="icon-facebook"></i></a></li>
+                                    <li><a href=""><i class="icon-twitter"></i></a></li>
+                                    <li><a href=""><i class="icon-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer__menu">
+                        <div class="footer__menu__column">
+                            <div class="footer__title">Munte</div>
+                            <ul>
+                                <li><a href="">Munte</a></li>
+                                <li><a href="">Hakkımızda</a></li>
+                                <li><a href="">Sponsorluklar</a></li>
+                                <li><a href="">İş Birlikleri</a></li>
+                                <li><a href="">Anlaşmalı Bankalar</a></li>
+                                <li><a href="">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu__column">
+                            <div class="footer__title">Borsa</div>
+                            <ul>
+                                <li><a href="">Borsa</a></li>
+                                <li><a href="">Hızlı Al/Sat</a></li>
+                                <li><a href="">Market</a></li>
+                                <li><a href="">ProMarket</a></li>
+                                <li><a href="">BTC Al/Sat</a></li>
+                                <li><a href="">ETH Al/Sat</a></li>
+                                <li><a href="">USDT Al/Sat</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu__column">
+                            <div class="footer__title">Yardım</div>
+                            <ul>
+                                <li><a href="">Yardım</a></li>
+                                <li><a href="">İşlem Ücreti</a></li>
+                                <li><a href="">Limit</a></li>
+                                <li><a href="">Duyurular</a></li>
+                                <li><a href="">Sık Sorulan Sorular</a></li>
+                                <li><a href="">Güvenlik</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu__column">
+                            <div class="footer__title">Sözleşmeler</div>
+                            <ul>
+                                <li>
+                                    <a href="">KVKK</a>
+                                    <ul>
+                                        <li><a href="">KVKK Formu</a></li>
+                                        <li><a href="">KVKK Aydınlatma Metni</a></li>
+                                        <li><a href="">Pazarlamaya Yönelik Aydınlatma Metni</a></li>
+                                        <li><a href="">Lorem Ipsum</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Kullanıcı Sözleşmesi</a></li>
+                                <li><a href="">Çerez Politikası</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__legal-text">Copyright 2022 Tüm hakları saklıdır.</div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

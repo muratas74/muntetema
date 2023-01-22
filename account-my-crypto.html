@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="auto" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equivs="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <title>Munte</title>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="inner-container">
+                    <div class="header__main">
+                        <div class="logo">
+                            <img src="./assets/images/munte-logo-.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="header__tools">
+
+                        <div class="header__mobile-menu-opener" onclick="openMenu(this)">
+                            <i class="icon-menu-open"></i>
+                        </div>
+                        <div class="header__tools__wrapper mobile-menu">
+                            <div class="mobile-menu-header">
+                                <div class="logo">
+                                    <img src="./assets/images/munte-logo-.svg" alt="">
+                                </div>
+                                <div class="menu-closer" onclick="openMenu(this)">
+                                    <i class="icon-menu-close"></i>
+                                </div>
+                            </div>
+                            <nav class="nav">
+                                <ul>
+                                    <li><a href="quick-buy-transactions.html">Hızlı Al/Sat</a></li>
+                                    <li><a href="market.html">Market</a></li>
+                                    <li><a href="promarket.html">ProMarket</a></li>
+                                    <!-- if logon -->
+                                    <li class="on-mobile has-sub">
+                                        <a href="">İşlemler</a>
+                                        <ul>
+                                            <li class="has-sub">
+                                                <a href="">Yatırma</a>
+                                                <ul>
+                                                    <li><a href="transactions-try-lodgement.html">TRY Yatırma</a></li>
+                                                    <li><a href="transactions-crypto-lodgement.html">Kripto Para Yatırma</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-sub">
+                                                <a href="">Çekme</a>
+                                                <ul>
+                                                    <li><a href="">TRY Çekme</a></li>
+                                                    <li><a href="transactions-crypto-withdraw.html">Kripto Para Çekme</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="">Dönüştürme</a></li>
+                                            <li class="has-sub">
+                                                <a href="">Emirlerim</a>
+                                                <ul>
+                                                    <li><a href="transactions-myorders.html">Açık Emirlerim</a></li>
+                                                    <li><a href="transactions-myorders.html">Gerçekleşen Emirlerim</a></li>
+                                                    <li><a href="transactions-myorders.html">İptal Edilen Emirlerim</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="">İşlem Geçmişim</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- if logon -->
+                                    <li class="on-mobile"><a href="transactions-assets.html">Varlıklarım</a></li>
+                                    <li><a href="">Blog</a></li>
+                                    <li class="has-sub"><a href="">Yardım</a>
+                                        <ul>
+                                            <li><a href="">Yardım</a></li>
+                                            <li><a href="">İşlem Ücreti</a></li>
+                                            <li><a href="">Limit</a></li>
+                                            <li><a href="">Duyurular</a></li>
+                                            <li><a href="">Sık Sorulan Sorular</a></li>
+                                            <li><a href="">Güvenlik</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="header__tools__user-actions">
+                                <div class="header__tools__user-actions__user">
+                                    <a href="" class="bttn bttn--primary-1--outline bttn--small">Giriş Yap</a>
+                                    <a href="" class="bttn bttn--primary-1 bttn--small">Kayıt Ol</a>
+                                </div>
+                                <ul>
+                                    <!-- login -->
+                                    <!-- <li>
+                                        <a href="">Giriş yap</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="bttn bttn--primary-1 bttn--small">Kayıt ol</a>
+                                    </li> -->
+                                    <!-- logon -->
+                                    <li class="has-sub">
+                                        <a href="">İşlemler</a>
+                                        <ul>
+                                            <li class="has-sub">
+                                                <a href="">Yatırma</a>
+                                                <ul>
+                                                    <li><a href="transactions-crypto-lodgement.html">TRY Yatırma</a>
+                                                    </li>
+                                                    <li><a href="transactions-crypto-lodgement.html">Kripto Para
+                                                            Yatırma</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-sub">
+                                                <a href="">Çekme</a>
+                                                <ul>
+                                                    <li><a href="transactions-try-withdraw.html">TRY Çekme</a></li>
+                                                    <li><a href="transactions-crypto-withdraw.html">Kripto Para
+                                                            Çekme</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="">Dönüştürme</a></li>
+                                            <li class="has-sub">
+                                                <a href="">Emirlerim</a>
+                                                <ul>
+                                                    <li><a href="transactions-myorders.html">Açık Emirlerim</a></li>
+                                                    <li><a href="transactions-myorders.html">Gerçekleşen Emirlerim</a></li>
+                                                    <li><a href="transactions-myorders.html">İptal Edilen Emirlerim</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="">İşlem Geçmişim</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="transactions-assets.html">Varlıklarım</a></li>
+                                    <li class="account new with-icon">
+                                        <a href="account-my-info.html"><i class="icon-user-1"></i></a>
+                                        <ul></ul>
+                                    </li>
+                                </ul>
+                                <div class="header__tools__lang-switch with-icon"><span class="label-text">Dil
+                                        Seçimi</span>
+                                    <div class="selected-lang has-sub">Türkçe</div><i class="icon-lang"></i>
+                                    <ul>
+                                        <li>TR</li>
+                                        <li>EN</li>
+                                    </ul>
+                                </div>
+                                <div class="header__tools__theme-switch">
+                                    <div class="label-text">Tema</div>
+                                    <label for="themeSwitch">
+                                        <input type="checkbox" name="themeSwitch" id="themeSwitch"
+                                            onchange="themeSwitch()">
+                                        <div class="header__tools__theme-switch__wrap">
+                                            <div class="header__tools__theme-switch__button">
+                                                <i class="icon-theme"></i>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <section class="my-account-area my-crypto">
+                    <aside class="side-menu assets-menu area">
+                        <ul>
+                            <li><a href="account-my-info.html" class="active">Hesap Bilgilerim</a></li>
+                            <li><a href="account-my-favourites.html">Favorilerim</a></li>
+                            <li><a href="account-my-banks.html">Banka Hesaplarım</a></li>
+                            <li><a href="account-my-crypto.html">Kripto Hesaplarım</a></li>
+                            <li class="has-sub">
+                                <a href="">Güvenlik</a>
+                                <ul>
+
+                                    <li><a href="account-my-pasword.html">Şifre Değiştirme</a></li>
+                                    <li><a href="account-my-phishing.html">Phishing Kod</a></li>
+                                    <li><a href="account-my-authenticator.html">Authenticator Kodu</a></li>
+                                    <li><a href="account-my-verifying.html">Hesap Doğrulama</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="account-my-messages.html">Mesajlar</a></li>
+                            <li><a href="account-my-notifications.html">Bildirimler</a></li>
+                            <li><a href="account-my-devices.html">Cihaz Bilgilerim</a></li>
+                        </ul>
+                    </aside>
+                    <section class="account-area area">
+                        <div class="section-title title title--big title--primary-1">
+                            <h2>Kayıtlı Kripto Adreslerim</h2>
+                        </div>
+                        <div class="content-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div>Hesap Adı</div>
+                                        </th>
+                                        <th>
+                                            <div>Hesap Adresi</div>
+                                        </th>
+                                        <th>
+                                            <div>İşlem</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>BTC - Btctürk - Annem</td>
+                                        <td>945j35nnksdnvs9s09dfs09d7fsdflksdnflsndfsdföana3u923u4</td>
+                                        <td><button class="edit"><i class="icon-edit"></i></button> <button
+                                                class="delete"><i class="icon-trasher-1"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ETH - Binance - Gamex</td>
+                                        <td>945j35nnksdnvs9s09dfs09d7fsdflksdnflsndfsdföana3u923u4</td>
+                                        <td><button class="edit"><i class="icon-edit"></i></button> <button
+                                                class="delete"><i class="icon-trasher-1"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ETH - Paribu - Diğer</td>
+                                        <td>945j35nnksdnvs9s09dfs09d7fsdflksdnflsndfsdföana3u923u4</td>
+                                        <td><button class="edit"><i class="icon-edit"></i></button> <button
+                                                class="delete"><i class="icon-trasher-1"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="f-row">
+                            <button class="bttn--primary-1">Kripto Adresi Ekle</button>
+                        </div>
+
+                    </section>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="inner-wrapper">
+                    <div class="corporate">
+                        <div class="corporate__logo">
+                            <img src="./assets/images/munte-logo-.svg" alt="Munte">
+                        </div>
+                        <div class="corporate__contact">
+                            <div class="corporate__address">
+                                <div class="corporate__address__row">
+                                    <div class="label-text">Adres:</div>
+                                    <div class="labeled-text">Küçükbakkalköy Mah. Yenidoğan Cad. No:25/1 İstanbul /
+                                        Ataşehir</div>
+                                </div>
+                                <div class="corporate__address__row">
+                                    <div class="label-text">E-posta:</div>
+                                    <div class="labeled-text"><a
+                                            href="mailto:destek@munte.com.tr">destek@munte.com.tr</a></div>
+                                </div>
+                                <div class="corporate__address__row">
+                                    <div class="label-text">Müşteri Hizmetleri:</div>
+                                    <div class="labeled-text"><a href="tel:+908504444444">0850 444 44 44</a></div>
+                                </div>
+                            </div>
+                            <div class="corporate__social-media">
+                                <ul>
+                                    <li><a href=""><i class="icon-instagram"></i></a></li>
+                                    <li><a href=""><i class="icon-facebook"></i></a></li>
+                                    <li><a href=""><i class="icon-twitter"></i></a></li>
+                                    <li><a href=""><i class="icon-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer__menu">
+                        <div class="footer__menu__column">
+                            <div class="footer__title">Munte</div>
+                            <ul>
+                                <li><a href="">Munte</a></li>
+                                <li><a href="">Hakkımızda</a></li>
+                                <li><a href="">Sponsorluklar</a></li>
+                                <li><a href="">İş Birlikleri</a></li>
+                                <li><a href="">Anlaşmalı Bankalar</a></li>
+                                <li><a href="">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu__column">
+                            <div class="footer__title">Borsa</div>
+                            <ul>
+                                <li><a href="">Borsa</a></li>
+                                <li><a href="">Hızlı Al/Sat</a></li>
+                                <li><a href="">Market</a></li>
+                                <li><a href="">ProMarket</a></li>
+                                <li><a href="">BTC Al/Sat</a></li>
+                                <li><a href="">ETH Al/Sat</a></li>
+                                <li><a href="">USDT Al/Sat</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu__column">
+                            <div class="footer__title">Yardım</div>
+                            <ul>
+                                <li><a href="">Yardım</a></li>
+                                <li><a href="">İşlem Ücreti</a></li>
+                                <li><a href="">Limit</a></li>
+                                <li><a href="">Duyurular</a></li>
+                                <li><a href="">Sık Sorulan Sorular</a></li>
+                                <li><a href="">Güvenlik</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu__column">
+                            <div class="footer__title">Sözleşmeler</div>
+                            <ul>
+                                <li>
+                                    <a href="">KVKK</a>
+                                    <ul>
+                                        <li><a href="">KVKK Formu</a></li>
+                                        <li><a href="">KVKK Aydınlatma Metni</a></li>
+                                        <li><a href="">Pazarlamaya Yönelik Aydınlatma Metni</a></li>
+                                        <li><a href="">Lorem Ipsum</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Kullanıcı Sözleşmesi</a></li>
+                                <li><a href="">Çerez Politikası</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__legal-text">Copyright 2022 Tüm hakları saklıdır.</div>
+            </div>
+        </footer>
+    </div>
+    <script src="./assets/js/custom.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

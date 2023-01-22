@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="auto" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equivs="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <title>Munte</title>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="inner-container">
+                    <div class="header__main">
+                        <div class="logo">
+                            <img src="./assets/images/munte-logo-.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="header__tools">
+
+                        <div class="header__mobile-menu-opener" onclick="openMenu(this)">
+                            <i class="icon-menu-open"></i>
+                        </div>
+                        <div class="header__tools__wrapper mobile-menu">
+                            <div class="mobile-menu-header">
+                                <div class="logo">
+                                    <img src="./assets/images/munte-logo-.svg" alt="">
+                                </div>
+                                <div class="menu-closer" onclick="openMenu(this)">
+                                    <i class="icon-menu-close"></i>
+                                </div>
+                            </div>
+                            <nav class="nav">
+                                <ul>
+                                    <li><a href="quick-buy-transactions.html">Hızlı Al/Sat</a></li>
+                                    <li><a href="market.html">Market</a></li>
+                                    <li><a href="promarket.html">ProMarket</a></li>
+                                    <!-- if logon -->
+                                    <li class="on-mobile has-sub">
+                                        <a href="">İşlemler</a>
+                                        <ul>
+                                            <li class="has-sub">
+                                                <a href="">Yatırma</a>
+                                                <ul>
+                                                    <li><a href="transactions-try-lodgement.html">TRY Yatırma</a></li>
+                                                    <li><a href="transactions-crypto-lodgement.html">Kripto Para Yatırma</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-sub">
+                                                <a href="">Çekme</a>
+                                                <ul>
+                                                    <li><a href="">TRY Çekme</a></li>
+                                                    <li><a href="transactions-crypto-withdraw.html">Kripto Para Çekme</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="">Dönüştürme</a></li>
+                                            <li class="has-sub">
+                                                <a href="">Emirlerim</a>
+                                                <ul>
+                                                    <li><a href="transactions-myorders.html">Açık Emirlerim</a></li>
+                                                    <li><a href="transactions-myorders.html">Gerçekleşen Emirlerim</a></li>
+                                                    <li><a href="transactions-myorders.html">İptal Edilen Emirlerim</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="">İşlem Geçmişim</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- if logon -->
+                                    <li class="on-mobile"><a href="transactions-assets.html">Varlıklarım</a></li>
+                                    <li><a href="">Blog</a></li>
+                                    <li class="has-sub"><a href="">Yardım</a>
+                                        <ul>
+                                            <li><a href="">Yardım</a></li>
+                                            <li><a href="">İşlem Ücreti</a></li>
+                                            <li><a href="">Limit</a></li>
+                                            <li><a href="">Duyurular</a></li>
+                                            <li><a href="">Sık Sorulan Sorular</a></li>
+                                            <li><a href="">Güvenlik</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="header__tools__user-actions">
+                                <div class="header__tools__user-actions__user">
+                                    <a href="" class="bttn bttn--primary-1--outline bttn--small">Giriş Yap</a>
+                                    <a href="" class="bttn bttn--primary-1 bttn--small">Kayıt Ol</a>
+                                </div>
+                                <ul>
+                                    <!-- login -->
+                                    <!-- <li>
+                                        <a href="">Giriş yap</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="bttn bttn--primary-1 bttn--small">Kayıt ol</a>
+                                    </li> -->
+                                    <!-- logon -->
+                                    <li class="has-sub">
+                                        <a href="">İşlemler</a>
+                                        <ul>
+                                            <li class="has-sub">
+                                                <a href="">Yatırma</a>
+                                                <ul>
+                                                    <li><a href="transactions-crypto-lodgement.html">TRY Yatırma</a>
+                                                    </li>
+                                                    <li><a href="transactions-crypto-lodgement.html">Kripto Para
+                                                            Yatırma</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-sub">
+                                                <a href="">Çekme</a>
+                                                <ul>
+                                                    <li><a href="transactions-try-withdraw.html">TRY Çekme</a></li>
+                                                    <li><a href="transactions-crypto-withdraw.html">Kripto Para
+                                                            Çekme</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="">Dönüştürme</a></li>
+                                            <li class="has-sub">
+                                                <a href="">Emirlerim</a>
+                                                <ul>
+                                                    <li><a href="transactions-myorders.html">Açık Emirlerim</a></li>
+                                                    <li><a href="transactions-myorders.html">Gerçekleşen Emirlerim</a></li>
+                                                    <li><a href="transactions-myorders.html">İptal Edilen Emirlerim</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="">İşlem Geçmişim</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="transactions-assets.html">Varlıklarım</a></li>
+                                    <li class="account new with-icon">
+                                        <a href="account-my-info.html"><i class="icon-user-1"></i></a>
+                                        <ul></ul>
+                                    </li>
+                                </ul>
+                                <div class="header__tools__lang-switch with-icon"><span class="label-text">Dil
+                                        Seçimi</span>
+                                    <div class="selected-lang has-sub">Türkçe</div><i class="icon-lang"></i>
+                                    <ul>
+                                        <li>TR</li>
+                                        <li>EN</li>
+                                    </ul>
+                                </div>
+                                <div class="header__tools__theme-switch">
+                                    <div class="label-text">Tema</div>
+                                    <label for="themeSwitch">
+                                        <input type="checkbox" name="themeSwitch" id="themeSwitch"
+                                            onchange="themeSwitch()">
+                                        <div class="header__tools__theme-switch__wrap">
+                                            <div class="header__tools__theme-switch__button">
+                                                <i class="icon-theme"></i>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <section class="quick-buy-transactions-area">
+                    <!-- stil _quick-buy-transactions-header.scss -->
+                    <div class="quick-buy-transactions-area__header area">
+                        <div class="market-dropdown">
+                            <div class="market-dropdown__selected" onclick="openDropdown(this)">
+                                <div class="coin-logo"></div>
+                                <div class="coin-info">
+                                    <div class="coin-name">BTC/TRY</div>
+                                    <div class="coin-value">351,237 TRY <span class="rate up">(%0,57)</span></div>
+                                </div>
+                            </div>
+                            <div class="market-dropdown__list market-list">
+                                <div class="market-dropdown__list__top">
+
+
+                                    <div class="input-wrap seearch-input">
+                                        <input type="text" placeholder="Arama">
+                                        <button class="search-button"><i class="icon-star-2"></i></button>
+                                    </div>
+                                    <div class="filter">
+                                        <ul>
+                                            <li>TRY</li>
+                                            <li>USDT</li>
+                                            <li>BTC</li>
+                                            <li class="active">Hepsi</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="market-dropdown__list__bottom">
+                                    <ul>
+                                        <li class="market-dropdown__list__item">
+                                            <div class="coin">
+                                                <div class="coin-logo"></div>
+                                                <div class="coin-info">
+                                                    <div class="coin-name">BTC/TRY</div>
+                                                    <div class="coin-value">351,237 TRY <span
+                                                            class="rate up">(%0,57)</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="like-button"></div>
+                                        </li>
+                                        <li class="market-dropdown__list__item">
+                                            <div class="coin">
+                                                <div class="coin-logo"></div>
+                                                <div class="coin-info">
+                                                    <div class="coin-name">BTC/TRY</div>
+                                                    <div class="coin-value">351,237 TRY <span
+                                                            class="rate up">(%0,57)</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="like-button"></div>
+                                        </li>
+                                        <li class="market-dropdown__list__item">
+                                            <div class="coin">
+                                                <div class="coin-logo"></div>
+                                                <div class="coin-info">
+                                                    <div class="coin-name">BTC/TRY</div>
+                                                    <div class="coin-value">351,237 TRY <span
+                                                            class="rate up">(%0,57)</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="like-button"></div>
+                                        </li>
+                                        <li class="market-dropdown__list__item">
+                                            <div class="coin">
+                                                <div class="coin-logo"></div>
+                                                <div class="coin-info">
+                                                    <div class="coin-name">BTC/TRY</div>
+                                                    <div class="coin-value">351,237 TRY <span
+                                                            class="rate up">(%0,57)</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="like-button"></div>
+                                        </li>
+                                        <li class="market-dropdown__list__item">
+                                            <div class="coin">
+                                                <div class="coin-logo"></div>
+                                                <div class="coin-info">
+                                                    <div class="coin-name">BTC/TRY</div>
+                                                    <div class="coin-value">351,237 TRY <span
+                                                            class="rate up">(%0,57)</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="like-button"></div>
+                                        </li>
+                                        <li class="market-dropdown__list__item">
+                                            <div class="coin">
+                                                <div class="coin-logo"></div>
+                                                <div class="coin-info">
+                                                    <div class="coin-name">BTC/TRY</div>
+                                                    <div class="coin-value">351,237 TRY <span
+                                                            class="rate up">(%0,57)</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="like-button"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="market-status">
+                            <div class="market-status__item">
+                                <div class="title">En iyi Alış</div>
+                                <div class="value">320,438</div>
+                            </div>
+                            <div class="market-status__item">
+                                <div class="title">En iyi Satış</div>
+                                <div class="value">324,438</div>
+                            </div>
+                            <div class="market-status__item">
+                                <div class="title">Ortalama</div>
+                                <div class="value">322,438</div>
+                            </div>
+                            <div class="market-status__item chart">
+                                <img src="./assets/images/dummychart.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="market-sort">
+                            <div class="input-wrap">
+                                <div class="dropdown combo-box combo-box__simple">
+                                    <div class="select-info" tabindex="2">
+                                        <div class="selected">1G</div>
+                                    </div>
+                                    <ul>
+                                        <li>1G</li>
+                                        <li>1H</li>
+                                        <li>1A</li>
+                                        <li>6A</li>
+                                        <li>1Y</li>
+                                        <li>5Y</li>
+                                        <li>Maks</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="promarket-area">
+                    <div class="promarket-area__top">
+                        <div class="orders-area area side">
+                            <div class="tab-navigation tab-navigation__bordered">
+                                <ul>
+                                    <li data-orders="buying-orders" class="active">Alış Emirleri</li>
+                                    <li data-orders="selling-orders">Satış Emirleri</li>
+                                </ul>
+                            </div>
+                            <div id="buying-orders">
+                                <div class="content-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <div>Adet (BTC)</div>
+                                                </th>
+                                                <th>
+                                                    <div>Fiyat (TRY)</div>
+                                                </th>
+                                                <th>
+                                                    <div>Tutar (TRY)</div>
+                                                </th>
+                                                <th>
+                                                    <div>Kümülatif</div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="selling-orders">
+                                <div class="content-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <div>Adet (BTC)</div>
+                                                </th>
+                                                <th>
+                                                    <div>Fiyat (TRY)</div>
+                                                </th>
+                                                <th>
+                                                    <div>Tutar (TRY)</div>
+                                                </th>
+                                                <th>
+                                                    <div>Kümülatif</div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0,000788</td>
+                                                <td>300,00</td>
+                                                <td>1,550</td>
+                                                <td>1,550</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-area center">
+                            <div id="general-chart" class="area active">
+                                <img src="./assets/images/btc-table.svg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="promarket-area__center">
+                        <div id="depth-chart" class="area">
+                            <img src="./assets/images/derinlik-table.svg" alt="">
+                        </div>
+                        <div class="quick-buy-transactions-area">
+                            <!-- stil _quick-buy-transactions-content.scss -->
+                            <div class="quick-buy-transactions-area__content hidden-mobile">
+                                <div class="mobile-tab tab-navigation">
+                                    <ul>
+                                        <li data-tab="buying" class="active">AL</li>
+                                        <li data-tab="selling">SAT</li>
+                                    </ul>
+                                </div>
+
+                                <div id="buying" class="area active">
+                                    <div class="title buying title--normal title--primary-1">
+                                        <h2>Bitcoin Al</h2>
+                                        <div class="action">
+                                            <ul>
+                                                <li class="action__item active">Piyasa <i class="icon-info"></i>
+                                                    <div class="infotip">Piyasa emri ile seçtiğiniz kripto paranın,
+                                                        borsadaki
+                                                        anlık fiyatına göre alış veya satış işlemi gerçekleştirirsiniz.
+                                                        Örneğin,
+                                                        XYZ’nin anlık değeri 10 TRY ise , piyasa emri ile 10 TRY’den
+                                                        alış/satış
+                                                        işleminiz gerçekleşir.
+                                                    </div>
+                                                </li>
+                                                <li class="action__item">Limit <i class="icon-info"></i>
+
+                                                </li>
+                                                <li class="action__item">Stop-Limit <i class="icon-info"></i>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="f-row">
+                                        <div class="input-wrap">
+                                            <label for="">Bitcoin Fiyatı</label>
+                                            <input type="number" class="text-end" placeholder="342.342 TRY" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="f-row">
+                                        <div class="input-wrap">
+                                            <label for="">Almak İstediğiniz Tutar</label>
+                                            <input type="number" class="text-end" placeholder="500 TRY">
+                                        </div>
+                                    </div>
+                                    <div class="f-row">
+                                        <div class="input-wrap">
+                                            <label for="">Almak İstediğiniz Adet</label>
+                                            <input type="number" class="text-end" placeholder="0,0034 BTC">
+                                        </div>
+                                    </div>
+                                    <!-- <div class="f-row range">
+                              vuetify range
+                            </div> -->
+                                    <div class="f-row align-items-center">
+                                        <div class="summary">
+
+                                            <div class="summary__item">Mevcut Bakiyeniz:</div>
+                                            <div class="summary__item">İşlem Sonrası TRY Bakiyeniz:</div>
+                                        </div>
+                                        <div class="login">
+                                            <a href="" class="login">Giriş Yap</a>
+                                            <a href="" class="register">Kayıt Ol</a>
+                                        </div>
+                                    </div>
+                                    <div class="f-row justify-content-center">
+                                        <button class="bttn--secondary-2">Bitcoin Al</button>
+                                    </div>
+                                </div>
+                                <div id="selling" class="area">
+                                    <div class="title selling title--normal title--primary-1">
+                                        <h2>Bitcoin Sat</h2>
+                                        <div class="action">
+                                            <ul>
+                                                <li class="action__item active">Piyasa <i class="icon-info"></i>
+
+                                                </li>
+                                                <li class="action__item">Limit <i class="icon-info"></i>
+
+                                                </li>
+                                                <li class="action__item">Stop-Limit <i class="icon-info"></i>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="f-row">
+                                        <div class="input-wrap">
+                                            <label for="">Bitcoin Fiyatı</label>
+                                            <input type="number" class="text-end" placeholder="342.342 TRY" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="f-row">
+                                        <div class="input-wrap">
+                                            <label for="">Satmak İstediğiniz Tutar</label>
+                                            <input type="number" class="text-end" placeholder="500 TRY">
+                                        </div>
+                                    </div>
+                                    <div class="f-row">
+                                        <div class="input-wrap">
+                                            <label for="">Satmak İstediğiniz Adet</label>
+                                            <input type="number" class="text-end" placeholder="0,0034 BTC">
+                                        </div>
+                                    </div>
+                                    <!-- <div class="f-row range">
+                              vuetify range
+                            </div> -->
+                                    <div class="f-row align-items-center">
+                                        <div class="summary">
+
+                                            <div class="summary__item">Mevcut Bakiyeniz:</div>
+                                            <div class="summary__item">İşlem Sonrası TRY Bakiyeniz:</div>
+                                        </div>
+                                        <div class="login">
+                                            <a href="" class="login">Giriş Yap</a>
+                                            <a href="" class="register">Kayıt Ol</a>
+                                        </div>
+                                    </div>
+                                    <div class="f-row justify-content-center">
+                                        <button class="bttn--secondary-3">Bitcoin Sat</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quick-buying-button">
+                            <ul>
+
+                                <li class="buying">Bitcoin Al</li>
+                                <li class="selling">Bitcoin Sat</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="promarket-area__bottom">
+                        <div class="active-orders area">
+                            <div class="section-title title title--normal title--primary-1">Açık Emirlerim</div>
+                            <div class="content-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div>Emir Tarihi</div>
+                                            </th>
+                                            <th>
+                                                <div>İşlem Çifti</div>
+                                            </th>
+                                            <th>
+                                                <div>İşlem</div>
+                                            </th>
+                                            <th>
+                                                <div>Emir Tipi</div>
+                                            </th>
+                                            <th>
+                                                <div>Tetikleme Fiyatı</div>
+                                            </th>
+                                            <th>
+                                                <div>Fiyat</div>
+                                            </th>
+                                            <th>
+                                                <div>Adet</div>
+                                            </th>
+                                            <th>
+                                                <div>Emir Tahtasında mı?</div>
+                                            </th>
+                                            <th>
+                                                <div>Bekleyen İşlem Yüzdesi</div>
+                                            </th>
+                                            <th>
+                                                <div>Emir Numarası</div>
+                                            </th>
+                                            <th>
+                                                <div></div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>22/10/2022 15:30:26</td>
+                                            <td>BTC / TRY</td>
+                                            <td>Alış</td>
+                                            <td>Limit</td>
+                                            <td>-</td>
+                                            <td>342,345.00 TRY</td>
+                                            <td>1BTC</td>
+                                            <td class="secondary-3">Hayır</td>
+                                            <td>%100</td>
+                                            <td>12345</td>
+                                            <td>
+                                                <button class="bttn--mini bttn--primary-1--outline">İptal Et</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>22/10/2022 15:30:26</td>
+                                            <td>BTC / TRY</td>
+                                            <td>Alış</td>
+                                            <td>Limit</td>
+                                            <td>-</td>
+                                            <td>342,345.00 TRY</td>
+                                            <td>1BTC</td>
+                                            <td class="secondary-3">Hayır</td>
+                                            <td>%100</td>
+                                            <td>12345</td>
+                                            <td>
+                                                <button class="bttn--mini bttn--primary-1--outline">İptal Et</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>22/10/2022 15:30:26</td>
+                                            <td>BTC / TRY</td>
+                                            <td>Alış</td>
+                                            <td>Limit</td>
+                                            <td>-</td>
+                                            <td>342,345.00 TRY</td>
+                                            <td>1BTC</td>
+                                            <td class="secondary-2">Evet</td>
+                                            <td>%100</td>
+                                            <td>12345</td>
+                                            <td>
+                                                <button class="bttn--mini bttn--primary-1--outline">İptal Et</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>22/10/2022 15:30:26</td>
+                                            <td>BTC / TRY</td>
+                                            <td>Alış</td>
+                                            <td>Limit</td>
+                                            <td>-</td>
+                                            <td>342,345.00 TRY</td>
+                                            <td>1BTC</td>
+                                            <td class="secondary-2">Evet</td>
+                                            <td>%100</td>
+                                            <td>12345</td>
+                                            <td>
+                                                <button class="bttn--mini bttn--primary-1--outline">İptal Et</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>22/10/2022 15:30:26</td>
+                                            <td>BTC / TRY</td>
+                                            <td>Alış</td>
+                                            <td>Limit</td>
+                                            <td>-</td>
+                                            <td>342,345.00 TRY</td>
+                                            <td>1BTC</td>
+                                            <td class="secondary-2">Evet</td>
+                                            <td>%100</td>
+                                            <td>12345</td>
+                                            <td>
+                                                <button class="bttn--mini bttn--primary-1--outline">İptal Et</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>22/10/2022 15:30:26</td>
+                                            <td>BTC / TRY</td>
+                                            <td>Alış</td>
+                                            <td>Limit</td>
+                                            <td>-</td>
+                                            <td>342,345.00 TRY</td>
+                                            <td>1BTC</td>
+                                            <td class="secondary-2">Evet</td>
+                                            <td>%100</td>
+                                            <td>12345</td>
+                                            <td>
+                                                <button class="bttn--mini bttn--primary-1--outline">İptal Et</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>22/10/2022 15:30:26</td>
+                                            <td>BTC / TRY</td>
+                                            <td>Alış</td>
+                                            <td>Limit</td>
+                                            <td>-</td>
+                                            <td>342,345.00 TRY</td>
+                                            <td>1BTC</td>
+                                            <td class="secondary-2">Evet</td>
+                                            <td>%100</td>
+                                            <td>12345</td>
+                                            <td>
+                                                <button class="bttn--mini bttn--primary-1--outline">İptal Et</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>22/10/2022 15:30:26</td>
+                                            <td>BTC / TRY</td>
+                                            <td>Alış</td>
+                                            <td>Limit</td>
+                                            <td>-</td>
+                                            <td>342,345.00 TRY</td>
+                                            <td>1BTC</td>
+                                            <td class="secondary-2">Evet</td>
+                                            <td>%100</td>
+                                            <td>12345</td>
+                                            <td>
+                                                <button class="bttn--mini bttn--primary-1--outline">İptal Et</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>22/10/2022 15:30:26</td>
+                                            <td>BTC / TRY</td>
+                                            <td>Alış</td>
+                                            <td>Limit</td>
+                                            <td>-</td>
+                                            <td>342,345.00 TRY</td>
+                                            <td>1BTC</td>
+                                            <td class="secondary-2">Evet</td>
+                                            <td>%100</td>
+                                            <td>12345</td>
+                                            <td>
+                                                <button class="bttn--mini bttn--primary-1--outline">İptal Et</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="other-process">
+                            <div class="area">
+                                <div class="section-title title title--normal title--primary-1">Gerçekleşen İşlemler
+                                </div>
+                                <div class="content-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <div>Zaman</div>
+                                                </th>
+                                                <th>
+                                                    <div>Adet (BTC)</div>
+                                                </th>
+                                                <th>
+                                                    <div>Fiyat (TRY)</div>
+                                                </th>
+                                                <th>
+                                                    <div>Tutar (TRY)</div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="secondary-2">
+                                                <td>22/10/2022 14:23:30</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                                <td>250</td>
+                                            </tr>
+                                            <tr class="bttn--secondary-3">
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr class="secondary-2">
+                                                <td>22/10/2022 14:23:30</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                                <td>250</td>
+                                            </tr>
+                                            <tr class="secondary-3">
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr class="secondary-3">
+                                                <td>22/10/2022 14:23:30</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                                <td>250</td>
+                                            </tr>
+                                            <tr class="secondary-2">
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr class="secondary-2">
+                                                <td>22/10/2022 14:23:30</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                                <td>250</td>
+                                            </tr>
+                                            <tr class="secondary-3">
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr class="secondary-2">
+                                                <td>22/10/2022 14:23:30</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                                <td>250</td>
+                                            </tr>
+                                            <tr class="secondary-2">
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr class="secondary-2">
+                                                <td>22/10/2022 14:23:30</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                                <td>250</td>
+                                            </tr>
+                                            <tr class="secondary-2">
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr class="secondary-2">
+                                                <td>22/10/2022 14:23:30</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                                <td>250</td>
+                                            </tr>
+                                            <tr class="secondary-2">
+                                                <td>2,000000</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr class="secondary-2">
+                                                <td>22/10/2022 14:23:30</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                                <td>250</td>
+                                            </tr>
+                                            <tr class="secondary-2">
+                                                <td>22/10/2022 14:23:30</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="area">
+                                <div class="section-title title title--normal title--primary-1">En İyi Alış İşlemleri
+                                </div>
+                                <div class="content-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+
+                                                <th>
+                                                    <div>Alış Fiyatı (TRY)</div>
+                                                </th>
+                                                <th>
+                                                    <div>Adet (BTC)</div>
+                                                </th>
+                                                <th>
+                                                    <div>Tutar (TRY)</div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+
+                                                <td>250</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>3,700</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>250</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>3,700</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>250</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>3,700</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>250</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>3,700</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>250</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>3,700</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>250</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>3,700</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>250</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>3,700</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>250</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>3,700</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="area">
+                                <div class="section-title title title--normal title--primary-1">En İyi Satış İşlemleri
+                                </div>
+                                <div class="content-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+
+                                                <th>
+                                                    <div>Satış Fiyatı (TRY)</div>
+                                                </th>
+                                                <th>
+                                                    <div>Adet (BTC)</div>
+                                                </th>
+                                                <th>
+                                                    <div>Tutar (TRY)</div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+
+                                                <td>250</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>3,700</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>250</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>3,700</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>250</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>3,700</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>250</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>3,700</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>250</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>3,700</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>250</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>3,700</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>250</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>3,700</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>250</td>
+                                                <td>1</td>
+                                                <td>300</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>3,700</td>
+                                                <td>200</td>
+                                                <td>3,700</td>
+                                            </tr>
+                                            <tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="general-overlay"></div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="inner-wrapper">
+                    <div class="corporate">
+                        <div class="corporate__logo">
+                            <img src="./assets/images/munte-logo-.svg" alt="Munte">
+                        </div>
+                        <div class="corporate__contact">
+                            <div class="corporate__address">
+                                <div class="corporate__address__row">
+                                    <div class="label-text">Adres:</div>
+                                    <div class="labeled-text">Küçükbakkalköy Mah. Yenidoğan Cad. No:25/1 İstanbul /
+                                        Ataşehir</div>
+                                </div>
+                                <div class="corporate__address__row">
+                                    <div class="label-text">E-posta:</div>
+                                    <div class="labeled-text"><a
+                                            href="mailto:destek@munte.com.tr">destek@munte.com.tr</a></div>
+                                </div>
+                                <div class="corporate__address__row">
+                                    <div class="label-text">Müşteri Hizmetleri:</div>
+                                    <div class="labeled-text"><a href="tel:+908504444444">0850 444 44 44</a></div>
+                                </div>
+                            </div>
+                            <div class="corporate__social-media">
+                                <ul>
+                                    <li><a href=""><i class="icon-instagram"></i></a></li>
+                                    <li><a href=""><i class="icon-facebook"></i></a></li>
+                                    <li><a href=""><i class="icon-twitter"></i></a></li>
+                                    <li><a href=""><i class="icon-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer__menu">
+                        <div class="footer__menu__column">
+                            <div class="footer__title">Munte</div>
+                            <ul>
+                                <li><a href="">Munte</a></li>
+                                <li><a href="">Hakkımızda</a></li>
+                                <li><a href="">Sponsorluklar</a></li>
+                                <li><a href="">İş Birlikleri</a></li>
+                                <li><a href="">Anlaşmalı Bankalar</a></li>
+                                <li><a href="">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu__column">
+                            <div class="footer__title">Borsa</div>
+                            <ul>
+                                <li><a href="">Borsa</a></li>
+                                <li><a href="">Hızlı Al/Sat</a></li>
+                                <li><a href="">Market</a></li>
+                                <li><a href="">ProMarket</a></li>
+                                <li><a href="">BTC Al/Sat</a></li>
+                                <li><a href="">ETH Al/Sat</a></li>
+                                <li><a href="">USDT Al/Sat</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu__column">
+                            <div class="footer__title">Yardım</div>
+                            <ul>
+                                <li><a href="">Yardım</a></li>
+                                <li><a href="">İşlem Ücreti</a></li>
+                                <li><a href="">Limit</a></li>
+                                <li><a href="">Duyurular</a></li>
+                                <li><a href="">Sık Sorulan Sorular</a></li>
+                                <li><a href="">Güvenlik</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu__column">
+                            <div class="footer__title">Sözleşmeler</div>
+                            <ul>
+                                <li>
+                                    <a href="">KVKK</a>
+                                    <ul>
+                                        <li><a href="">KVKK Formu</a></li>
+                                        <li><a href="">KVKK Aydınlatma Metni</a></li>
+                                        <li><a href="">Pazarlamaya Yönelik Aydınlatma Metni</a></li>
+                                        <li><a href="">Lorem Ipsum</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Kullanıcı Sözleşmesi</a></li>
+                                <li><a href="">Çerez Politikası</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__legal-text">Copyright 2022 Tüm hakları saklıdır.</div>
+            </div>
+        </footer>
+    </div>
+    <script src="./assets/js/custom.js"></script>
+
+    <script>
+        let likeButton = document.querySelectorAll(".like-button");
+        for (var i = 0; i < likeButton.length; i++) {
+            var elem = likeButton[i];
+            elem.onclick = function () {
+                this.classList.toggle("liked")
+            };
+        }
+        openDropdown = (e) => {
+            let x = e.parentElement;
+            const dropList = x.querySelector(".market-list");
+            dropList.classList.toggle("opened")
+            e.parentElement.classList.toggle("clicked")
+        }
+        let quickBuy = document.querySelector(".quick-buying-button");
+        let overlay = document.querySelector(".general-overlay");
+
+        quickBuy.onclick = function () {
+            document.querySelector(".hidden-mobile").classList.toggle("active")
+            overlay.classList.toggle("active")
+        };
+        overlay.onclick = function () {
+            document.querySelector(".hidden-mobile").classList.toggle("active")
+            overlay.classList.toggle("active")
+        };
+    </script>
+</body>
+
+</html>
